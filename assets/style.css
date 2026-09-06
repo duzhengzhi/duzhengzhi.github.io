@@ -161,14 +161,54 @@ main.wrap { padding-top: 28px; }
 
 @media (max-width: 520px) {
   .logo-motto { white-space: normal; max-width: 42vw; }
-  .nav-text { display: none; }
+  .nav-text:not(.nav-guestbook) { display: none; }
 }
 
-.guestbook {
-  padding: 4px 12px 16px;
-  min-height: 120px;
+
+button.nav-guestbook {
+  appearance: none; border: 0; background: transparent; cursor: pointer;
+  font: inherit;
 }
-.guestbook .giscus,
-.guestbook .giscus-frame {
-  width: 100%;
+.gb-dialog {
+  border: 0; padding: 0; margin: auto;
+  background: transparent; max-width: calc(100vw - 32px);
+  width: min(400px, 100%);
 }
+.gb-dialog::backdrop {
+  background: rgba(0,0,0,.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.gb-sheet {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.18);
+  overflow: hidden;
+  max-height: min(72vh, 560px);
+  display: flex; flex-direction: column;
+}
+.gb-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 12px; padding: 14px 14px 8px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.gb-head h2 {
+  margin: 0; font-size: 15px; font-weight: 600; letter-spacing: -.02em;
+}
+.gb-hint {
+  margin: 2px 0 0; font-size: 11px; color: var(--muted);
+}
+.gb-close {
+  appearance: none; border: 0; cursor: pointer;
+  font: inherit; font-size: 12px; font-weight: 600;
+  color: var(--blue); background: var(--pill);
+  padding: 6px 12px; border-radius: 980px;
+}
+.gb-close:hover { filter: brightness(0.97); }
+.gb-body {
+  padding: 4px 10px 10px;
+  overflow: auto;
+  min-height: 180px;
+}
+.gb-body .giscus, .gb-body .giscus-frame { width: 100%; }
