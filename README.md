@@ -1,4 +1,4 @@
-# 杜先生的个人主页
+# 杜先生的博客
 
 - 站点：https://duzhengzhi.github.io
 - X：https://x.com/iMrDu1
