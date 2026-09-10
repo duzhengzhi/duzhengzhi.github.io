@@ -1,0 +1,26 @@
+.prose h2 { margin: 36px 0 12px; font-size: 22px; font-weight: 700; letter-spacing: -.03em; }
+.prose ul, .prose ol { padding-left: 1.2em; max-width: 38em; }
+.prose li { font-size: 17px; line-height: 1.6; margin: 6px 0; }
+.prose code { font-size: .86em; background: rgba(0,0,0,.05); padding: 1px 6px; border-radius: 6px; }
+.kw-admin { color: #c41d1d; font-weight: 650; }
+.kw-desk { color: #0066cc; font-weight: 650; }
+.kw-fee { color: #b25000; font-weight: 650; }
+.kw-login { color: #0b6a4a; font-weight: 650; }
+.kw-super { color: #7a2ea0; font-weight: 650; }
+.kw-ok { color: #248a3d; font-weight: 650; }
+.kw-bad { color: #c41d1d; font-weight: 650; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0 28px; }
+.box { border-radius: 18px; padding: 16px 18px; background: var(--card); border: 1px solid var(--line); }
+.box.admin { box-shadow: inset 3px 0 0 #c41d1d; }
+.box.desk { box-shadow: inset 3px 0 0 #0066cc; }
+.box h3 { margin: 0 0 8px; font-size: 16px; }
+.box p { font-size: 14px !important; line-height: 1.5; margin: 0 0 8px; }
+.box .note { color: var(--muted); margin: 0; }
+@media (max-width: 620px) { .pair { grid-template-columns: 1fr; } }
+@media (prefers-color-scheme: dark) {
+  .kw-desk { color: #2997ff; }
+  .kw-admin { color: #ff6b6b; }
+  .kw-fee { color: #ff9f0a; }
+  .kw-login { color: #32d74b; }
+  .kw-super { color: #bf5af2; }
+}
