@@ -4,26 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>杜先生的博客</title>
-  <meta name="description" content="杜先生的博客。诚其意，正其心，修其身。所思与所作。" />
-  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-  <link rel="stylesheet" href="/assets/style.css?v=13" />
+  <meta name="description" content="杜先生的博客。诚其意，正其心，修其身。文章与 iOS。" />
+  <link rel="stylesheet" href="/assets/style.css?v=14" />
   <link rel="icon" href="/assets/avatar.jpg" />
   <link rel="apple-touch-icon" href="/assets/avatar.jpg" />
 </head>
 <body>
   <nav class="nav" aria-label="主导航">
     <div class="nav-inner">
-            <a class="logo" href="/">
-        <img class="logo-avatar" src="/assets/avatar.jpg?v=13" alt="" width="32" height="32" />
+      <a class="logo" href="/">
+        <img class="logo-avatar" src="/assets/avatar.jpg?v=14" alt="" width="32" height="32" />
         <span class="logo-text">
           <span class="logo-title">杜先生的博客</span>
           <span class="logo-motto">诚其意，正其心，修其身。</span>
         </span>
       </a>
       <div class="nav-right">
-        <a class="nav-text" href="#notes">所思</a>
-        <a class="nav-text" href="#things">所作</a>
+        <a class="nav-text" href="#articles">文章</a>
+        <a class="nav-text" href="/ios.html">iOS</a>
         <button type="button" class="nav-text nav-guestbook" id="open-guestbook" aria-haspopup="dialog" aria-controls="guestbook-dialog">留言</button>
         <div class="nav-icons">
           <a class="icon-btn" href="https://x.com/iMrDu1" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
@@ -32,13 +30,15 @@
       </div>
     </div>
   </nav>
-
 <main class="wrap">
-    <section class="panel" id="notes" aria-labelledby="notes-title">
-      <div class="panel-head">
-        <h2 id="notes-title">所思</h2>
-      </div>
+    <section class="panel" id="articles" aria-labelledby="articles-title">
+      <div class="panel-head"><h2 id="articles-title">文章</h2></div>
       <div class="posts">
+        <a class="post" href="/posts/yc-property-work-system.html">
+          <time datetime="2026-09-10">2026-09-10</time>
+          <h3>源诚物业工作系统：一个小区，一套办公室</h3>
+          <p>后台只开项目，工作台管小区。需求、功能与收费怎么算。</p>
+        </a>
         <a class="post" href="/posts/hello-world.html">
           <time datetime="2026-09-06">2026-09-06</time>
           <h3>在 GitHub 上安一个安静的家</h3>
@@ -51,61 +51,17 @@
         </a>
       </div>
     </section>
-
-    <section class="panel things-panel" id="things" aria-labelledby="things-title">
-      <div class="panel-head">
-        <h2 id="things-title">所作</h2>
-      </div>
-      <div class="list">
-        <a class="app" href="https://apps.apple.com/cn/app/%E6%97%A5%E5%BD%95/id6760174469" target="_blank" rel="noopener">
-          <img class="icon" src="/assets/icons/rilu.jpg?v=13" alt="日录" width="56" height="56" loading="lazy" />
-          <div class="meta"><h3>日录</h3><p>日记与人生记忆线</p></div>
-          <span class="pill">查看</span>
-        </a>
-        <a class="app" href="https://apps.apple.com/cn/app/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E5%9D%9F%E5%A2%93/id6762561550" target="_blank" rel="noopener">
-          <img class="icon" src="/assets/icons/grave.jpg?v=13" alt="创业公司坟墓" width="56" height="56" loading="lazy" />
-          <div class="meta"><h3>创业公司坟墓</h3><p>失败创业案例与复盘</p></div>
-          <span class="pill">查看</span>
-        </a>
-        <a class="app" href="https://apps.apple.com/cn/app/%E8%AE%B0%E5%BE%97%E5%90%83%E8%8D%AF/id6760927492" target="_blank" rel="noopener">
-          <img class="icon" src="/assets/icons/med.jpg?v=13" alt="记得吃药" width="56" height="56" loading="lazy" />
-          <div class="meta"><h3>记得吃药</h3><p>服药提醒与打卡</p></div>
-          <span class="pill">查看</span>
-        </a>
-        <a class="app" href="https://apps.apple.com/cn/app/%E5%9B%9B%E8%B1%A1%E9%99%90%E5%B7%A5%E4%BD%9C%E6%B3%95/id6775128170" target="_blank" rel="noopener">
-          <img class="icon" src="/assets/icons/four.jpg?v=13" alt="四象限工作法" width="56" height="56" loading="lazy" />
-          <div class="meta"><h3>四象限工作法</h3><p>重要与紧急的待办</p></div>
-          <span class="pill">查看</span>
-        </a>
-        <a class="app" href="https://apps.apple.com/cn/app/%E7%A4%BC%E7%B0%BF/id6761087591" target="_blank" rel="noopener">
-          <img class="icon" src="/assets/icons/tact.jpg?v=13" alt="礼簿" width="56" height="56" loading="lazy" />
-          <div class="meta"><h3>礼簿</h3><p>人情往来一本清</p></div>
-          <span class="pill">查看</span>
-        </a>
-        <a class="app" href="https://apps.apple.com/cn/app/%E5%B7%AE%E7%82%B9%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C/id6778190089" target="_blank" rel="noopener">
-          <img class="icon" src="/assets/icons/near.jpg?v=13" alt="差点改变世界" width="56" height="56" loading="lazy" />
-          <div class="meta"><h3>差点改变世界</h3><p>差一点改写历史的瞬间</p></div>
-          <span class="pill">查看</span>
-        </a>
-      </div>
-    </section>
 </main>
-
-
   <dialog class="gb-dialog" id="guestbook-dialog" aria-labelledby="gb-title">
     <div class="gb-sheet">
       <header class="gb-head">
-        <div>
-          <h2 id="gb-title">留言</h2>
-          <p class="gb-hint">说一句就好</p>
-        </div>
+        <div><h2 id="gb-title">留言</h2><p class="gb-hint">说一句就好</p></div>
         <button type="button" class="gb-close" id="close-guestbook" aria-label="关闭">完成</button>
       </header>
       <div class="gb-body" id="giscus-host"></div>
     </div>
   </dialog>
-  <script src="/assets/guestbook.js?v=13" defer></script>
-
+  <script src="/assets/guestbook.js?v=14" defer></script>
   <footer class="footer"><p>© 2026 杜先生</p></footer>
 </body>
 </html>
