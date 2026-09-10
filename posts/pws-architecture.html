@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>物业工作系统功能架构分析 — 杜先生的博客</title>
+  <link rel="stylesheet" href="/assets/style.css?v=15" />
+  <link rel="stylesheet" href="/assets/article.css?v=15" />
+  <link rel="icon" href="/assets/avatar.jpg" />
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a class="logo" href="/">
+      <img class="logo-avatar" src="/assets/avatar.jpg?v=15" alt="" width="32" height="32" />
+      <span class="logo-text"><span class="logo-title">杜先生的博客</span><span class="logo-motto">诚其意，正其心，修其身。</span></span>
+    </a>
+    <div class="nav-right"><a class="nav-text" href="/">文章</a><a class="nav-text" href="/projects.html">项目</a></div>
+  </div></nav>
+  <article class="article wrap">
+    <p class="crumb"><a href="/">← 文章</a></p>
+    <h1>物业工作系统功能架构分析</h1>
+    <p class="meta">2026-09-10 · 随功能改动更新</p>
+    <div class="prose">
+      <p>源诚物业工作系统切成两半：<span class="kw-admin">超级后台</span>只开项目、管订阅和账号；<span class="kw-desk">项目工作台</span>才处理某一个小区的业务。一项目一条固定链接，一套<span class="kw-login">登录密码</span>，一套<span class="kw-super">超级密码</span>。</p>
+      <h2>总结构</h2>
+      <div class="pair">
+        <div class="box admin"><h3>超级后台</h3><p>源诚运营用。生成小区、固定链接、发双密码、冻结/解冻/续费/删除。</p><p class="note">不采集业主隐私，不看欠费人数。</p></div>
+        <div class="box desk"><h3>项目工作台</h3><p>该小区物业用。入驻导入、欠费收款、台账、报修、财务。</p><p class="note">数据留在本项目。链接生成后不可改。</p></div>
+      </div>
+      <p>超级账号不能进工作台；工作台账号不能进后台；A 项目不能登 B 项目。冻结或过期后，工作台业务按钮不可用。</p>
+      <h2>两套密码</h2>
+      <ul>
+        <li><span class="kw-login">登录密码</span>：日常进入工作台。不能进后台、财务、不能清空台账。</li>
+        <li><span class="kw-super">超级密码</span>：改登录密码、清空台账、打开财务管理。不能当登录用。</li>
+      </ul>
+      <h2>超级后台</h2>
+      <ol>
+        <li>填小区全称（2–40 字，全库唯一），生成固定链接 <code>/p/{slug}/login</code>。</li>
+        <li>登录账号 = 小区名缩写 + 当天月日。同时生成登录密码和超级密码，链接可复制，生成后永不改。</li>
+        <li>开通时记录订阅月数、到期日、实收金额。续费同样记一笔。</li>
+        <li>冻结后工作台提示已冻结；恢复/续费按月重算到期。</li>
+        <li>可改登录账号、登录密码、超级密码。</li>
+        <li>删除项目：链接失效。</li>
+        <li>到期自动冻结。剩约 30 天，工作台提示联系续费。</li>
+      </ol>
+      <p>后台没有监管模块，没有各小区人数，没有业主明细。</p>
+      <h2>工作台登录与侧栏</h2>
+      <p>打开专属链接，欢迎语带本项目名。账号 + 登录密码 + 算术验证码。空项目会被带到<span class="kw-desk">项目信息</span>。</p>
+      <ol>
+        <li>最上：小区名 + 「物业工作系统」。</li>
+        <li>接着：项目信息，下面一条线。</li>
+        <li>空心「速查收款」⌘K → 工作台 → 台账 → 财务 → 问题统计。</li>
+        <li>选中整块红色。底部只留退出。</li>
+      </ol>
+      <h2>入驻与导入</h2>
+      <p>多选资产类型（住宅/车库/商铺/储藏室，可自定义）；住宅再选建筑类型。单价默认 1 元/㎡·月。示范表九列随勾选变。<strong>一位业主有几项资产就写几行。</strong></p>
+      <p>不强制表头。同一文件可再导。大表走进度。导入后显示户数与各类型套数。再导只追加本项目。</p>
+      <h2>工作台与台账</h2>
+      <p>工作台只列欠费户，可按楼栋/金额/天数排序并缴费。<span class="kw-bad">今天晚于截止日</span>为欠费；<span class="kw-ok">未超过</span>为正常。台账列跟导入表走，清空全部要超级密码。</p>
+      <h2>计费</h2>
+      <p>一行 = 一项资产。年度金额 ≈ 面积 × 单价 × 年系数；日物业费 = 年度 ÷ 365。欠费额 = 欠费天数 × 日物业费。一户多项金额加总。缴费交的是该收的钱；截止日多拉的记<span class="kw-fee">送月</span>。</p>
+      <h2>财务与报修</h2>
+      <p>财务必须超级密码，只对当前浏览器窗口有效。可按年、从几月到几月看合计与趋势。报修只留本项目。</p>
+      <h2>下一步</h2>
+      <p>缴费要打进财务。旧宽表也要认得出。单价写死「元/㎡·月」。功能改了先改这篇。</p>
+    </div>
+  </article>
+  <footer class="footer"><p>© 2026 杜先生</p></footer>
+</body></html>
