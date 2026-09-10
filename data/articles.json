@@ -1,5 +1,14 @@
 [
-  {"slug": "pws-architecture", "title": "物业工作系统功能架构分析", "date": "2026-09-10", "summary": "超级后台只开项目，工作台管小区。功能、计费、权限与下一步。"},
-  {"slug": "hello-world", "title": "在 GitHub 上安一个安静的家", "date": "2026-09-06", "summary": "为什么要有个人博客，以及我会在这里写什么。"},
-  {"slug": "building-in-public-quietly", "title": "安静地做产品", "date": "2026-09-06", "summary": "不追喧闹的增长叙事，把一件小事做完整。"}
+  {
+    "slug": "pws-architecture",
+    "title": "物业工作系统功能架构分析",
+    "date": "2026-09-10",
+    "summary": "超级后台只开项目，工作台管小区。功能、计费、权限与下一步。"
+  },
+  {
+    "slug": "hello-world",
+    "title": "在 GitHub 上安一个安静的家",
+    "date": "2026-09-06",
+    "summary": "为什么要有个人博客，以及我会在这里写什么。"
+  }
 ]
