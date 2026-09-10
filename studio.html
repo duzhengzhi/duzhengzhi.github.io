@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>管理文章</title>
+<link rel="stylesheet" href="/assets/style.css?v=15" />
+<link rel="icon" href="/assets/avatar.jpg" />
+</head><body>
+<nav class="nav"><div class="nav-inner"><a class="logo" href="/"><span class="logo-title">管理文章</span></a><a class="nav-text" href="/">返回</a></div></nav>
+<main class="wrap article">
+<p class="meta">Token 只存你这台电脑浏览器。需要本仓库 contents 写入权限。</p>
+<input id="token" type="password" placeholder="GitHub Token ghp_…" style="width:100%;height:40px;border-radius:12px;border:1px solid rgba(0,0,0,.12);padding:0 12px" />
+<div id="list" class="posts"></div>
+<h2 id="form-title">写新文章</h2>
+<input id="slug" placeholder="链接名 slug" style="width:100%;height:40px;border-radius:12px;border:1px solid rgba(0,0,0,.12);padding:0 12px;margin:8px 0" />
+<input id="title" placeholder="标题" style="width:100%;height:40px;border-radius:12px;border:1px solid rgba(0,0,0,.12);padding:0 12px;margin:8px 0" />
+<input id="date" placeholder="2026-09-10" style="width:100%;height:40px;border-radius:12px;border:1px solid rgba(0,0,0,.12);padding:0 12px;margin:8px 0" />
+<input id="summary" placeholder="摘要" style="width:100%;height:40px;border-radius:12px;border:1px solid rgba(0,0,0,.12);padding:0 12px;margin:8px 0" />
+<textarea id="body" placeholder="正文 HTML" style="width:100%;min-height:240px;border-radius:16px;border:1px solid rgba(0,0,0,.12);padding:12px;margin:8px 0"></textarea>
+<p><button class="pill" id="save" style="border:0;cursor:pointer">保存</button>
+<button class="pill" id="reset" style="border:0;cursor:pointer;background:#eee;color:#333">清空</button></p>
+<p id="msg" class="meta"></p>
+</main>
+<script src="/assets/studio.js?v=15"></script>
+</body></html>
