@@ -388,18 +388,5 @@
     "cost_level": 0,
     "gain": "—",
     "evidence": "—"
-  },
-  {
-    "slug": "hello-world",
-    "title": "在 GitHub 上安一个安静的家",
-    "date": "2026-09-06",
-    "summary": "为什么要有个人博客，以及我会在这里写什么。",
-    "category": "essay",
-    "tags": ["随笔"],
-    "reading_time": 2,
-    "cost": "—",
-    "cost_level": 0,
-    "gain": "—",
-    "evidence": "—"
   }
 ]
