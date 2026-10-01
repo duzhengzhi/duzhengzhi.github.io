@@ -38,6 +38,8 @@ async function renderArticles() {
         <div class="post-top">
           ${cat ? `<span class="cat-badge">${cat}</span>` : ""}
           <time datetime="${esc(a.date)}">${esc(a.date)}</time>
+          ${a.reading_time ? `<span class="post-rt">${a.reading_time} 分钟</span>` : ""}
+          ${a.cost_level ? `<span class="post-cost">${esc(a.cost)}</span>` : ""}
         </div>
         <h3>${esc(a.title)}</h3>
         <p>${esc(a.summary || "")}</p>

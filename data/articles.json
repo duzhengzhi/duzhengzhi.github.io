@@ -1,37 +1,67 @@
 [
   {
     "slug": "digital-self-defense",
-    "title": "一小时的数字自卫",
+    "title": "你的密码可能已经在黑市躺了好几年",
     "date": "2026-10-01",
-    "summary": "密码管理器 + 两步验证 + 统一恢复渠道，把账号从裸奔状态救回来。",
-    "category": "digital"
+    "summary": "一处泄露引爆全部账号的解法：四个命门、密码管理器、验证器优先于短信。一小时，零块钱。",
+    "category": "digital",
+    "tags": ["账号安全", "免费", "一小时上手"],
+    "reading_time": 6,
+    "cost": "¥0 · 1 小时",
+    "cost_level": 0,
+    "gain": "被盗风险断崖式下降",
+    "evidence": "强"
   },
   {
     "slug": "insurance-basics",
-    "title": "值得买的保险就四种，一种都别多买",
+    "title": "一年两三千，把全家的风险搬走",
     "date": "2026-10-01",
-    "summary": "医保打底，百万医疗、意外、定期寿险按顺序配，带「返还」的一律不碰。",
-    "category": "money"
+    "summary": "医保打底，百万医疗、意外、定期寿险按顺序配齐。返还型一律不碰，爸妈走惠民保路线。",
+    "category": "money",
+    "tags": ["保险", "家庭", "避坑"],
+    "reading_time": 8,
+    "cost": "约 2000–5000 元/年",
+    "cost_level": 2,
+    "gain": "大病、意外、身故三类风险全部转移",
+    "evidence": "强（条款事实）"
   },
   {
     "slug": "sleep-better",
-    "title": "睡眠：普通人回报率最高的一笔投资",
+    "title": "你缺的不是褪黑素，是一个固定的起床时间",
     "date": "2026-10-01",
-    "summary": "不花一分钱的健康干预：固定起床时间，比任何助眠产品都有效。",
-    "category": "body"
+    "summary": "固定起床时间（含周末）、咖啡因设截止线、手机挪远——全部免费，比任何助眠产品都有效。",
+    "category": "body",
+    "tags": ["睡眠", "免费", "三周见效"],
+    "reading_time": 7,
+    "cost": "¥0 · 两三周适应期",
+    "cost_level": 0,
+    "gain": "入睡变快、白天清醒、长期健康",
+    "evidence": "强"
   },
   {
     "slug": "pws-architecture",
     "title": "物业工作系统功能架构分析",
     "date": "2026-09-10",
     "summary": "超级后台只开项目，工作台管小区。功能、计费、权限与下一步。",
-    "category": "career"
+    "category": "career",
+    "tags": ["架构", "Rails"],
+    "reading_time": 10,
+    "cost": "—",
+    "cost_level": 0,
+    "gain": "—",
+    "evidence": "—"
   },
   {
     "slug": "hello-world",
     "title": "在 GitHub 上安一个安静的家",
     "date": "2026-09-06",
     "summary": "为什么要有个人博客，以及我会在这里写什么。",
-    "category": "essay"
+    "category": "essay",
+    "tags": ["随笔"],
+    "reading_time": 2,
+    "cost": "—",
+    "cost_level": 0,
+    "gain": "—",
+    "evidence": "—"
   }
 ]
