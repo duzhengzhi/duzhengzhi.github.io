@@ -1,14 +1,37 @@
 [
   {
+    "slug": "digital-self-defense",
+    "title": "一小时的数字自卫",
+    "date": "2026-10-01",
+    "summary": "密码管理器 + 两步验证 + 统一恢复渠道，把账号从裸奔状态救回来。",
+    "category": "digital"
+  },
+  {
+    "slug": "insurance-basics",
+    "title": "值得买的保险就四种，一种都别多买",
+    "date": "2026-10-01",
+    "summary": "医保打底，百万医疗、意外、定期寿险按顺序配，带「返还」的一律不碰。",
+    "category": "money"
+  },
+  {
+    "slug": "sleep-better",
+    "title": "睡眠：普通人回报率最高的一笔投资",
+    "date": "2026-10-01",
+    "summary": "不花一分钱的健康干预：固定起床时间，比任何助眠产品都有效。",
+    "category": "body"
+  },
+  {
     "slug": "pws-architecture",
     "title": "物业工作系统功能架构分析",
     "date": "2026-09-10",
-    "summary": "超级后台只开项目，工作台管小区。功能、计费、权限与下一步。"
+    "summary": "超级后台只开项目，工作台管小区。功能、计费、权限与下一步。",
+    "category": "career"
   },
   {
     "slug": "hello-world",
     "title": "在 GitHub 上安一个安静的家",
     "date": "2026-09-06",
-    "summary": "为什么要有个人博客，以及我会在这里写什么。"
+    "summary": "为什么要有个人博客，以及我会在这里写什么。",
+    "category": "essay"
   }
 ]

@@ -1,3 +1,30 @@
+/* —— 三要素卡：花掉什么 / 换回什么 / 证据多硬 —— */
+.deal {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  margin: 22px 0 8px; max-width: 42em;
+}
+.deal-cell {
+  border-radius: 16px; padding: 14px 14px 12px;
+  background: var(--card); border: 1px solid var(--line);
+}
+.deal-cell dt {
+  font-size: 11px; font-weight: 650; letter-spacing: .08em;
+  color: var(--muted); margin: 0 0 6px;
+}
+.deal-cell dd { margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; }
+.deal-cell.cost dd { color: #b25000; }
+.deal-cell.gain dd { color: var(--green, #0d8a4e); }
+@media (prefers-color-scheme: dark) {
+  .deal-cell.cost dd { color: #ff9f0a; }
+  .deal-cell.gain dd { color: #30d158; }
+}
+@media (max-width: 620px) { .deal { grid-template-columns: 1fr; } }
+.disclaimer {
+  max-width: 42em; margin: 40px 0 0; padding: 12px 16px;
+  border-radius: 14px; background: var(--pill, #e3f4ea);
+  color: var(--muted); font-size: 13px; line-height: 1.6;
+}
+
 .prose h2 { margin: 36px 0 12px; font-size: 22px; font-weight: 700; letter-spacing: -.03em; }
 .prose ul, .prose ol { padding-left: 1.2em; max-width: 38em; }
 .prose li { font-size: 17px; line-height: 1.6; margin: 6px 0; }

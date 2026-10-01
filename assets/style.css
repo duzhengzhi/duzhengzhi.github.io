@@ -1,28 +1,29 @@
-/* 杜先生的博客 — Apple-like writing site */
+/* 碳基人生指南 — 现代博客风 */
 :root {
-  --bg: #f5f5f7;
-  --ink: #1d1d1f;
-  --muted: #86868b;
-  --line: rgba(0,0,0,.06);
-  --card: rgba(255,255,255,.78);
-  --pill: #e8f2ff;
-  --blue: #0066cc;
-  --ring: rgba(0,0,0,.06);
+  --bg: #f6f7f5;
+  --ink: #1a231e;
+  --muted: #7d8a82;
+  --line: rgba(20, 40, 30, .08);
+  --card: rgba(255,255,255,.82);
+  --pill: #e3f4ea;
+  --green: #0d8a4e;
+  --green-deep: #0a6b3c;
+  --ring: rgba(20, 40, 30,.08);
   --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
            "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #000; --ink: #f5f5f7; --muted: #a1a1a6; --line: rgba(255,255,255,.1);
-    --card: rgba(28,28,30,.88); --pill: rgba(10,132,255,.16); --blue: #2997ff;
-    --ring: rgba(255,255,255,.12);
+    --bg: #0b0f0d; --ink: #eef3ef; --muted: #93a39a; --line: rgba(255,255,255,.1);
+    --card: rgba(24,32,27,.88); --pill: rgba(48,209,88,.16); --green: #30d158;
+    --green-deep: #5be087; --ring: rgba(255,255,255,.12);
   }
 }
 * { box-sizing: border-box; }
 body {
   margin: 0; min-height: 100vh; font-family: var(--sans); color: var(--ink);
   background:
-    radial-gradient(900px 420px at 50% -100px, rgba(255,140,60,.09), transparent 58%),
+    radial-gradient(900px 420px at 50% -100px, rgba(13,138,78,.08), transparent 58%),
     var(--bg);
   -webkit-font-smoothing: antialiased; letter-spacing: -.01em;
 }
@@ -55,7 +56,7 @@ main.wrap { padding-top: 28px; }
   line-height: 1.15;
 }
 .logo-title {
-  font-size: 15px; font-weight: 600; letter-spacing: -.02em;
+  font-size: 15px; font-weight: 700; letter-spacing: -.02em;
 }
 .logo-motto {
   font-size: 11px; font-weight: 400; color: var(--muted);
@@ -74,40 +75,61 @@ main.wrap { padding-top: 28px; }
 }
 .icon-btn:hover { background: var(--line); }
 
-.hero { text-align: center; padding: 52px 24px 28px; }
-.avatar-wrap {
-  width: 118px; height: 118px; margin: 0 auto; border-radius: 50%; padding: 3px;
-  background: linear-gradient(145deg, rgba(255,255,255,.95), rgba(0,0,0,.07));
-  box-shadow: 0 12px 36px rgba(0,0,0,.06);
+/* —— 指南 hero：编辑部风，左对齐 —— */
+.hero-guide { padding: 64px 0 10px; }
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 600; letter-spacing: .14em;
+  color: var(--green); margin: 0 0 18px;
 }
-@media (prefers-color-scheme: dark) {
-  .avatar-wrap {
-    background: linear-gradient(145deg, rgba(255,255,255,.16), rgba(0,0,0,.45));
-    box-shadow: 0 12px 36px rgba(0,0,0,.5);
-  }
+.hero-kicker::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 22%, transparent);
 }
-.avatar {
-  width: 112px; height: 112px; border-radius: 50%; object-fit: cover; display: block;
+.hero-guide h1 {
+  margin: 0 0 14px; font-size: clamp(34px, 6.4vw, 52px);
+  font-weight: 800; letter-spacing: -.04em; line-height: 1.06;
 }
-.hero h1 {
-  margin: 18px 0 6px; font-size: clamp(28px, 5vw, 36px);
-  font-weight: 700; letter-spacing: -.035em;
+.hero-guide h1 em {
+  font-style: normal; color: var(--green);
+  background: linear-gradient(transparent 68%, color-mix(in srgb, var(--green) 26%, transparent) 68%);
 }
-.role { margin: 0; font-size: 13px; color: var(--muted); letter-spacing: .12em; font-weight: 500; }
-.motto {
-  margin: 8px 0 0;
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--muted);
-  letter-spacing: .14em;
-  font-weight: 400;
+.hero-sub {
+  margin: 0 0 8px; font-size: clamp(16px, 2.6vw, 19px);
+  font-weight: 600; letter-spacing: -.02em; line-height: 1.4;
 }
+.hero-note {
+  margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--muted);
+  max-width: 34em;
+}
+.hero-note b { color: var(--ink); font-weight: 600; }
+
+/* —— 分类 chips —— */
+.chips {
+  display: flex; gap: 8px; overflow-x: auto; padding: 22px 0 6px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch; touch-action: pan-x;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  appearance: none; border: 1px solid var(--line); cursor: pointer;
+  background: var(--card); color: var(--muted);
+  font: 600 13px/1 var(--sans); letter-spacing: .01em;
+  padding: 9px 15px; border-radius: 980px; white-space: nowrap;
+  transition: transform .15s ease, background .15s ease, color .15s ease;
+}
+.chip:hover { color: var(--ink); }
+.chip:active { transform: scale(.95); }
+.chip.on {
+  background: var(--green); border-color: transparent; color: #fff;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--green) 38%, transparent);
+}
+@media (prefers-color-scheme: dark) { .chip.on { color: #062b17; } }
 
 .panel {
   background: var(--card); border: 1px solid var(--line); border-radius: 24px;
-  padding: 6px; margin-bottom: 20px;
+  padding: 6px; margin: 18px 0 20px;
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 8px 40px rgba(0,0,0,.03);
+  box-shadow: 0 8px 40px rgba(10, 30, 20, .04);
 }
 .panel-head { padding: 14px 16px 6px; }
 .panel-head h2 {
@@ -121,12 +143,18 @@ main.wrap { padding-top: 28px; }
   transition: background .18s ease;
 }
 .post:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
-.post time { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.post-top { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+.post time { font-size: 12px; color: var(--muted); }
 .post h3 {
-  margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -.02em; line-height: 1.25;
+  margin: 0; font-size: 20px; font-weight: 650; letter-spacing: -.02em; line-height: 1.25;
 }
 .post p { margin: 6px 0 0; font-size: 14px; color: var(--muted); line-height: 1.45; }
-
+.cat-badge {
+  display: inline-flex; align-items: center;
+  font-size: 11px; font-weight: 650; letter-spacing: .02em;
+  color: var(--green); background: var(--pill);
+  padding: 3px 9px; border-radius: 980px;
+}
 .list { padding: 0 6px 8px; }
 .app {
   display: grid; grid-template-columns: 56px minmax(0,1fr) auto;
@@ -139,17 +167,20 @@ main.wrap { padding-top: 28px; }
 }
 .meta h3 { margin: 0; font-size: 15px; font-weight: 600; }
 .meta p { margin: 2px 0 0; font-size: 12px; color: var(--muted); }
+.meta { color: var(--muted); }
 .pill {
-  display: inline-flex; padding: 5px 12px; border-radius: 980px;
-  background: var(--pill); color: var(--blue); font-size: 12px; font-weight: 600;
+  display: inline-flex; padding: 8px 16px; border-radius: 980px;
+  background: var(--green); color: #fff; font-size: 13px; font-weight: 600;
+  border: 0; cursor: pointer;
 }
+@media (prefers-color-scheme: dark) { .pill { color: #062b17; } }
 
 .article { padding: 36px 0 64px; }
-.crumb { font-size: 14px; color: var(--blue); margin: 0 0 20px; }
-.crumb a { color: var(--blue); }
+.crumb { font-size: 14px; color: var(--green); margin: 0 0 20px; }
+.crumb a { color: var(--green); }
 .article h1 {
   margin: 0 0 8px; font-size: clamp(28px, 5vw, 40px);
-  font-weight: 700; letter-spacing: -.03em; line-height: 1.15;
+  font-weight: 800; letter-spacing: -.03em; line-height: 1.15;
 }
 .article .meta { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
 .prose p {
@@ -162,8 +193,8 @@ main.wrap { padding-top: 28px; }
 @media (max-width: 520px) {
   .logo-motto { white-space: normal; max-width: 42vw; }
   .nav-text:not(.nav-guestbook) { display: none; }
+  .hero-guide { padding-top: 44px; }
 }
-
 
 button.nav-guestbook {
   appearance: none; border: 0; background: transparent; cursor: pointer;
@@ -202,10 +233,10 @@ button.nav-guestbook {
 .gb-close {
   appearance: none; border: 0; cursor: pointer;
   font: inherit; font-size: 12px; font-weight: 600;
-  color: var(--blue); background: var(--pill);
+  color: var(--green); background: var(--pill);
   padding: 6px 12px; border-radius: 980px;
 }
-.gb-close:hover { filter: brightness(0.97); }
+.gb-close:hover { filter: brightness(.97); }
 .gb-body {
   padding: 4px 10px 10px;
   overflow: auto;
