@@ -46,6 +46,11 @@ function listView(posts, q) {
         <span class="year">App Store</span>
       </a>
       <a class="row" href="https://github.com/duzhengzhi/Ritual" target="_blank" rel="noopener">
+        <span class="vol">GitHub</span>
+        <span class="title">记得吃药 iOS</span>
+        <span class="year">Ritual</span>
+      </a>
+      <a class="row" href="file:///Users/zz/Downloads/Ritual-main">
         <span class="vol">Mac</span>
         <span class="title">/Users/zz/Downloads/Ritual-main</span>
         <span class="year">下载目录</span>
