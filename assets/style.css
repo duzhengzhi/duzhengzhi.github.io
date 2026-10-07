@@ -251,3 +251,64 @@ button.nav-guestbook {
   min-height: 180px;
 }
 .gb-body .giscus, .gb-body .giscus-frame { width: 100%; }
+
+/* 栏目与作品卡 */
+.nav-inner { width: min(100% - 32px, 880px); }
+.wrap { width: min(100% - 40px, 880px); }
+.logo-motto { letter-spacing: 0; }
+
+.doors {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin: 28px 0 8px;
+}
+.door {
+  display: flex; flex-direction: column; gap: 8px;
+  min-height: 148px; padding: 18px 16px 16px;
+  border-radius: 22px; border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: 0 8px 32px rgba(10, 30, 20, .04);
+}
+.door:hover { background: color-mix(in srgb, var(--card) 70%, var(--pill)); }
+.door-kicker {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  color: var(--green); text-transform: uppercase;
+}
+.door h2 { margin: 0; font-size: 20px; letter-spacing: -.03em; line-height: 1.2; }
+.door p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+.door-go { margin-top: auto; font-size: 13px; font-weight: 650; color: var(--green); }
+
+.work {
+  display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px;
+  padding: 16px 14px; border-radius: 18px;
+}
+.work:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+.mark {
+  width: 64px; height: 64px; border-radius: 16px;
+  display: grid; place-items: center;
+  font-size: 22px; font-weight: 750; color: #fff; letter-spacing: -.04em;
+  box-shadow: 0 0 0 .5px var(--ring);
+}
+.mark.lookup { background: linear-gradient(160deg, #0d8a4e, #146c43); }
+.mark.site { background: linear-gradient(160deg, #1a231e, #3d4f45); }
+.work h3 { margin: 0 0 4px; font-size: 18px; letter-spacing: -.02em; }
+.work .lead { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.tag {
+  font-size: 11px; font-weight: 650; color: var(--muted);
+  border: 1px solid var(--line); border-radius: 980px; padding: 3px 8px;
+}
+.work-links { display: flex; gap: 8px; margin-top: 12px; }
+.work-links a, .text-link {
+  font-size: 13px; font-weight: 650; color: var(--green);
+}
+.note-quiet { font-size: 12px; color: var(--muted); margin: 8px 16px 12px; }
+
+.split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 14px; align-items: start; }
+.home-posts .post h3 { font-size: 17px; }
+
+@media (max-width: 720px) {
+  .doors, .split { grid-template-columns: 1fr; }
+  .nav-text:not(.nav-guestbook) { display: inline-flex; padding: 6px 8px; font-size: 12px; }
+  .logo-motto { display: none; }
+  .nav-right { gap: 2px; }
+}

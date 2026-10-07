@@ -3,38 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>碳基常识</title>
-  <meta name="description" content="给碳基生物的常识手册：每篇写清花掉什么、换回什么、证据多硬。" />
-  <link rel="stylesheet" href="/assets/style.css?v=22" />
+  <title>杜铮志 — 作品与感悟</title>
+  <meta name="description" content="杜铮志的作品展示、文章感悟，以及单独一栏的高性价比人生。" />
+  <link rel="stylesheet" href="/assets/style.css?v=23" />
   <link rel="icon" href="/assets/avatar.jpg" />
 </head>
 <body>
   <nav class="nav"><div class="nav-inner">
     <a class="logo" href="/">
-      <img class="logo-avatar" src="/assets/avatar.jpg?v=22" alt="" width="32" height="32" />
-      <span class="logo-text"><span class="logo-title">碳基常识</span><span class="logo-motto">生活常识，明码标价。</span></span>
+      <img class="logo-avatar" src="/assets/avatar.jpg?v=23" alt="" width="32" height="32" />
+      <span class="logo-text"><span class="logo-title">杜铮志</span><span class="logo-motto">诚其意，正其心，修其身。</span></span>
     </a>
     <div class="nav-right">
-      <a class="nav-text" href="/">文章</a>
-      <a class="nav-text" href="/projects.html">项目</a>
+      <a class="nav-text" href="/works.html">作品</a>
+      <a class="nav-text" href="/essays.html">感悟</a>
+      <a class="nav-text" href="/life.html">高性价比人生</a>
       <button type="button" class="nav-text nav-guestbook" id="open-guestbook">留言</button>
     </div>
   </div></nav>
   <main class="wrap">
     <section class="hero-guide">
-      <p class="hero-kicker">CARBON COMMON SENSE</p>
-      <h1>碳基<em>常识</em></h1>
-      <p class="hero-sub">给碳基生物的常识手册。</p>
-      <p class="hero-note">每篇只讲一件事，并写清三样东西：<b>花掉什么</b>、<b>换回什么</b>、<b>证据多硬</b>。不是任务清单，是一张按性价比排好的备选单——挑走一两条就算数。</p>
+      <p class="hero-kicker">WORKS AND NOTES</p>
+      <h1>做出来的，和<em>写下来的</em></h1>
+      <p class="hero-sub">作品展示，文章感悟。高性价比人生单独一栏。</p>
+      <p class="hero-note">作品只放还在做的非 iOS 项目。iOS 应用、警务服务、物业系统不在这一栏。感悟是自己的判断；高性价比人生仍按花掉什么、换回什么、证据多硬来写。</p>
     </section>
-    <div class="chips" id="cat-chips"></div>
+    <div class="doors">
+      <a class="door" href="/works.html">
+        <span class="door-kicker">01</span>
+        <h2>作品</h2>
+        <p>GitHub 上还在推进的项目。不含 iOS、警务、物业系统。</p>
+        <span class="door-go">去看作品 →</span>
+      </a>
+      <a class="door" href="/essays.html">
+        <span class="door-kicker">02</span>
+        <h2>文章感悟</h2>
+        <p>做完一件事之后留下的判断，不按清单写。</p>
+        <span class="door-go">去读感悟 →</span>
+      </a>
+      <a class="door" href="/life.html">
+        <span class="door-kicker">03</span>
+        <h2>高性价比人生</h2>
+        <p>一件事值不值得做：成本、回报、证据。</p>
+        <span class="door-go">进入这一栏 →</span>
+      </a>
+    </div>
+    <div class="split">
+      <section class="panel">
+        <div class="panel-head"><h2>作品</h2></div>
+        <a class="work" href="/works.html">
+          <div class="mark lookup">查</div>
+          <div>
+            <h3>源诚查一查</h3>
+            <p class="lead">招标公告与中标企业查询。先选地区和行业，结果带回原始公告。</p>
+            <div class="tags"><span class="tag">Rails</span><span class="tag">自用</span><span class="tag">代码未公开</span></div>
+          </div>
+        </a>
+        <a class="work" href="https://github.com/duzhengzhi/duzhengzhi.github.io" target="_blank" rel="noopener">
+          <div class="mark site">站</div>
+          <div>
+            <h3>这个站点</h3>
+            <p class="lead">作品、感悟、高性价比人生。静态页，仓库公开。</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">GitHub Pages</span></div>
+          </div>
+        </a>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h2>最近的感悟</h2></div>
+        <div class="posts home-posts" id="home-essays"></div>
+      </section>
+    </div>
     <section class="panel">
-      <div class="panel-head"><h2>全部文章</h2></div>
-      <div class="posts" id="article-list"></div>
+      <div class="panel-head"><h2>高性价比人生 · 最近四篇</h2></div>
+      <div class="posts home-posts" id="home-life"></div>
     </section>
   </main>
   <dialog class="gb-dialog" id="guestbook-dialog"><div class="gb-sheet"><header class="gb-head"><div><h2>留言</h2><p class="gb-hint">说一句就好</p></div><button type="button" class="gb-close" id="close-guestbook">完成</button></header><div class="gb-body" id="giscus-host"></div></div></dialog>
-  <script src="/assets/guestbook.js?v=22" defer></script>
-  <script src="/assets/articles.js?v=22" defer></script>
-  <footer class="footer"><p>© 2026 杜先生 · 碳基常识</p></footer>
-</body></html>
+  <script src="/assets/guestbook.js?v=23" defer></script>
+  <script src="/assets/articles.js?v=23" defer></script>
+  <footer class="footer"><p>© 2026 杜铮志 · 作品与感悟</p></footer>
+</body>
+</html>

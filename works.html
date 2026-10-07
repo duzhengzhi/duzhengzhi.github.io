@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>作品 — 杜铮志</title>
+  <meta name="description" content="GitHub 上的作品。不含 iOS 应用、警务服务和物业系统。" />
+  <link rel="stylesheet" href="/assets/style.css?v=23" />
+  <link rel="icon" href="/assets/avatar.jpg" />
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a class="logo" href="/">
+      <img class="logo-avatar" src="/assets/avatar.jpg?v=23" alt="" width="32" height="32" />
+      <span class="logo-text"><span class="logo-title">杜铮志</span><span class="logo-motto">诚其意，正其心，修其身。</span></span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-text" href="/works.html">作品</a>
+      <a class="nav-text" href="/essays.html">感悟</a>
+      <a class="nav-text" href="/life.html">高性价比人生</a>
+      <button type="button" class="nav-text nav-guestbook" id="open-guestbook">留言</button>
+    </div>
+  </div></nav>
+  <main class="wrap">
+    <section class="hero-guide">
+      <p class="hero-kicker">WORKS</p>
+      <h1>作品</h1>
+      <p class="hero-sub">GitHub 上还在做的项目。</p>
+      <p class="hero-note">iOS 应用、警务服务、物业系统不放在这里。私有仓库不挂外链，避免点进去是 404。</p>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h2>在做</h2></div>
+      <article class="work">
+        <div class="mark lookup">查</div>
+        <div>
+          <h3>源诚查一查</h3>
+          <p class="lead">招标信息与中标企业查询。先选地区、再选行业，看到精确匹配的公告，每条结果带原始公告链接。也可以按公司回看公开公告里的中标记录。</p>
+          <div class="tags"><span class="tag">Ruby on Rails</span><span class="tag">SQLite</span><span class="tag">yc-lookup</span><span class="tag">自用</span></div>
+          <p class="lead" style="margin-top:10px">地区可打到县区，行业支持拼音首字母。结果按项目去重，已截止的默认藏起。公司页只采用公告原文里公开的电话，不接第三方工商库。</p>
+          <div class="work-links"><span class="text-link">代码未公开</span></div>
+        </div>
+      </article>
+      <article class="work">
+        <div class="mark site">站</div>
+        <div>
+          <h3>这个站点</h3>
+          <p class="lead">个人站点。作品、文章感悟、高性价比人生三条线。纯静态，放在 GitHub Pages。</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">公开仓库</span></div>
+          <div class="work-links"><a href="https://github.com/duzhengzhi/duzhengzhi.github.io" target="_blank" rel="noopener">仓库 →</a></div>
+        </div>
+      </article>
+      <p class="note-quiet">未列入：日录、创业公司坟墓、记得吃药、四象限、礼簿、碳基常识 App，以及警务服务、源诚物业工作站。</p>
+    </section>
+  </main>
+  <dialog class="gb-dialog" id="guestbook-dialog"><div class="gb-sheet"><header class="gb-head"><div><h2>留言</h2><p class="gb-hint">说一句就好</p></div><button type="button" class="gb-close" id="close-guestbook">完成</button></header><div class="gb-body" id="giscus-host"></div></div></dialog>
+  <script src="/assets/guestbook.js?v=23" defer></script>
+  <footer class="footer"><p>© 2026 杜铮志</p></footer>
+</body>
+</html>
