@@ -37,6 +37,19 @@ function listView(posts, q) {
           <span class="title">${esc(p.title || "无题")}</span>
           <span class="year">${esc(p.date || "")}</span>
         </a>`).join("") || `<p class="empty">还没有文章。</p>`}
+    </div>
+    <p class="label">下载</p>
+    <div class="list">
+      <a class="row" href="https://apps.apple.com/cn/app/id6760927492" target="_blank" rel="noopener">
+        <span class="vol">iOS</span>
+        <span class="title">记得吃药</span>
+        <span class="year">App Store</span>
+      </a>
+      <a class="row" href="https://github.com/duzhengzhi/Ritual" target="_blank" rel="noopener">
+        <span class="vol">Mac</span>
+        <span class="title">记得吃药 iOS</span>
+        <span class="year">下载目录</span>
+      </a>
     </div>`);
   const input = document.getElementById("q");
   input.oninput = () => listView(posts, input.value);
