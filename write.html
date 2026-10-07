@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>写文章 — 杜铮志</title>
+  <link rel="stylesheet" href="/assets/style.css?v=1" />
+</head>
+<body>
+  <div class="studio">
+    <header class="studio-top">
+      <div class="mark"><a href="/">杜铮志</a></div>
+      <div class="nav">
+        <span class="status" id="status">已保存</span>
+        <a href="/">文章</a>
+        <a href="#" id="publish">发布</a>
+      </div>
+    </header>
+    <div class="cols">
+      <aside class="col pad" id="books"></aside>
+      <section class="col pad">
+        <input class="find" id="find" placeholder="搜索" />
+        <div id="notes"></div>
+        <button class="add" id="create" type="button">新建</button>
+      </section>
+      <section class="col">
+        <div class="editor-wrap" id="editor" hidden>
+          <input class="title-input" id="title" placeholder="无题" />
+          <div class="tools" id="tools">
+            <button class="tool" type="button" data-cmd="h2">小标题</button>
+            <button class="tool" type="button" data-cmd="bold">粗体</button>
+            <button class="tool" type="button" data-cmd="italic">斜体</button>
+            <button class="tool" type="button" data-cmd="quote">引用</button>
+            <button class="tool" type="button" data-cmd="list">列表</button>
+            <button class="tool" type="button" data-cmd="line">线段</button>
+            <button class="tool" type="button" data-cmd="pin">置顶</button>
+            <button class="tool" type="button" data-cmd="trash">丢弃</button>
+          </div>
+          <div class="sheet" id="sheet" contenteditable="true"></div>
+          <div class="tags"><input class="tag-input" id="tags" placeholder="标签，用空格分开" /></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="modal" id="token-modal" hidden>
+    <form class="sheet-box" id="token-form">
+      <h2>发布到站点</h2>
+      <p>令牌只留在这台浏览器。需要 repo 权限，用来把文章写进 duzhengzhi.github.io。</p>
+      <input id="token" type="password" autocomplete="off" placeholder="github_pat_..." />
+      <div class="row-actions">
+        <button class="tool" type="submit">保存并发布</button>
+        <button class="tool" type="button" id="token-cancel">取消</button>
+      </div>
+    </form>
+  </div>
+  <script src="/assets/write.js?v=1"></script>
+</body>
+</html>

@@ -1,3 +1,5 @@
-# duzhengzhi.github.io
+# 杜铮志
 
-站点已清空。
+写文章的地方。阅读在首页，写作在 /write.html。
+
+https://duzhengzhi.github.io/
